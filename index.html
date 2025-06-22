@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SHIVA'S WIKIPEDIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+
+  <img
+    src="https://i.postimg.cc/Pr5T9JBM/Chat-GPT-Image-Jun-21-2025-11-17-11-PM.png"
+    alt="SHIVA Logo"
+    class="top-right-logo"
+  />
+
+  <!-- Entry Section -->
+  <div id="entrySection" class="entry-container">
+    <h1 class="entry-title">Welcome to SHIVA'S WIKIPEDIA</h1>
+    <input id="nameInput" class="entry-input" type="text" placeholder="Enter your name" />
+    <button id="startBtn" class="button">Start</button>
+  </div>
+
+  <!-- Main App Section -->
+  <div id="mainApp" class="main-container hidden ">
+    <div class="wiki-search-header">
+      <img class="wiki-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png" alt="Wikipedia Logo" />
+      <h1 class="typing-title"><span id="typedText">SHIVA'S WIKIPEDIA</span></h1>
+      <p id="greeting" class="greeting-text"></p>
+
+      <img class="search-icon" src="https://cdn-icons-png.flaticon.com/512/954/954591.png" alt="Search Icon" />
+      <input
+        id="searchInput"
+        class="search-input"
+        placeholder="Type a keyword and press Enter to search"
+        autocomplete="off"
+      />
+
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="modeToggle" />
+          <span class="slider"></span>
+        </label>
+        <span class="toggle-label">Dark Mode</span>
+      </div>
+
+      <div class="spinner hidden" id="spinner">🔄 Searching...</div>
+    </div>
+
+    <div class="search-results" id="searchResults"></div>
+  </div>
+
+  <script src="internet.js"></script>
+</body>
+</html>

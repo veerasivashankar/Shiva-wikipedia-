@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Orbitron", sans-serif;
+  background-color: #ffffff;
+  color: #000;
+  transition: background 0.5s ease, color 0.5s ease;
+  min-height: 100vh;
+}
+
+body.dark-mode {
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Entry Screen */
+.entry-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffffff;
+  color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+body.dark-mode .entry-container {
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+.entry-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.entry-input {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  width: 280px;
+  margin-bottom: 15px;
+}
+
+.button {
+  background-color: #00ffe0;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #00ccaa;
+}
+
+/* Main App */
+.main-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  padding-top: 80px;
+}
+
+.wiki-search-header {
+  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 16px;
+  padding: 30px 20px;
+  margin-bottom: 40px;
+}
+
+body.dark-mode .wiki-search-header {
+  background-color: #222;
+}
+
+.wiki-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.typing-title {
+  font-size: 28px;
+  color: #00ffee;
+  text-shadow: 0 0 10px #00ffee;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.greeting-text {
+  font-size: 18px;
+  color: #00ffee;
+  margin: 10px 0;
+}
+
+.search-icon {
+  width: 48px;
+  margin: 15px auto;
+  display: block;
+  filter: drop-shadow(0 0 6px #00ffee);
+  transition: transform 0.3s ease;
+}
+
+body.light-mode .search-icon {
+  filter: drop-shadow(0 0 6px #333);
+}
+
+.search-icon:hover {
+  transform: scale(1.1);
+}
+
+.search-input {
+  width: 90%;
+  max-width: 600px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  background-color: #ffffff;
+  color: #000;
+  box-shadow: 0 0 5px #aaa;
+  margin-bottom: 15px;
+}
+
+body.dark-mode .search-input {
+  background-color: #111a2b;
+  color: #fff;
+  box-shadow: 0 0 10px #00ffe0;
+}
+
+.toggle-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 24px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #00ffe0;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.toggle-label {
+  font-size: 14px;
+}
+
+.spinner {
+  color: #00ffe0;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.search-results {
+  margin-top: 20px;
+}
+
+/* Result Items */
+.result-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #00ffe0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+  transition: transform 0.2s ease;
+  color: #000;
+}
+
+body.dark-mode .result-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+.top-right-logo {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 60px;
+  height: auto;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+  transition: transform 0.3s ease;
+}
+.top-right-logo:hover {
+  transform: scale(1.1);
+}
+
+.result-title {
+  font-size: 20px;
+  color: #0044cc;
+  text-decoration: none;
+}
+
+body.dark-mode .result-title {
+  color: #00d9ff;
+}
+
+.result-url {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #1a7f37;
+  text-decoration: none;
+}
+
+body.dark-mode .result-url {
+  color: #66ff66;
+}
+
+.link-description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+body.dark-mode .link-description {
+  color: #ccc;
+}
